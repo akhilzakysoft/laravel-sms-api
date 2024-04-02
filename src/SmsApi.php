@@ -187,8 +187,8 @@ class SmsApi
             $this->response = $response->getBody()->getContents();
             $this->responseCode = $response->getStatusCode();
 
-            Log::info('SMS Gateway Response Code: '. $this->responseCode);
-            Log::info('SMS Gateway Response Body: \n'. $this->response);
+            // Log::info('SMS Gateway Response Code: '. $this->responseCode);
+            // Log::info('SMS Gateway Response Body: \n'. $this->response);
 
 //            $this->response = $promise->wait()->getBody()->getContents();
 
@@ -198,8 +198,8 @@ class SmsApi
                 $this->response = Message::bodySummary($response);
                 $this->responseCode = $response->getStatusCode();
 
-                Log::error('SMS Gateway Response Code: '. $this->responseCode);
-                Log::error('SMS Gateway Response Body: \n'. $this->response);
+                 Log::error('SMS Gateway Response Code: '. $this->responseCode);
+                 Log::error('SMS Gateway Response Body: \n'. $this->response);
             }
         }
         return $this;
